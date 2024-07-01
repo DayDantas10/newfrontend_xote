@@ -717,8 +717,8 @@ a:focus {
 .info_section {
   background-color: #C59855;
   color: #ffffff;
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .info_section .contact_nav {
@@ -755,7 +755,7 @@ a:focus {
 }
 
 .info_section .contact_nav a:hover {
-  color: #f89646;
+  color: #000000;
 }
 
 .info_section .info_top {
@@ -780,10 +780,13 @@ a:focus {
   color: #ffffff;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+      margin-top: 35px;
+      text-align: center;
+      margin-left: 30px;
 }
 
 .info_section .info_links .info_links_menu a:hover, .info_section .info_links .info_links_menu a.active {
-  color: #f89646;
+  color: #000000;
 }
 
 .info_section .info_post .post_box {
@@ -878,15 +881,15 @@ a:focus {
   border-radius: 5px;
   width: 45px;
   height: 45px;
-  border: 1px solid #6bb7be;
-  color: #6bb7be;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   font-size: 18px;
   margin-right: 10px;
 }
 
 .info_section .info_form .social_box a:hover {
-  color: #f89646;
-  border-color: #f89646;
+  color: #000000;
+  border-color: #000000;
 }
 
 /* footer section*/
