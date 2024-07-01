@@ -421,7 +421,8 @@ a:focus {
 }
 
 .about_section .detail-box a:hover {
-  background-color: transparent;
+  background-color: tra
+  nsparent;
   color: #6bb7be;
 }
 
@@ -435,12 +436,21 @@ a:focus {
           align-items: center;
 }
 
-.letra_section .img-box img {
-  width: 100%;
+.letra_section .logoart img{
+  display: inline-block;
+  width:60%;
+  height: 50%;
+  gap: 12px;
+  border-radius: 50%;
+  margin-inline-end: 5px;
+  box-align:right;
 }
 
+.letra_section .detail-box h2, h4{
+  float:left;
+}
 .letra_section .detail-box p {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 35px;
 }
 
@@ -455,6 +465,13 @@ a:focus {
   transition: all .2s;
 }
 
+.letra_section .detail-box.imageart img{
+  width: 110px;
+  gap:10px;
+  position:center;
+  margin-top: 0;
+  border-radius: 50%;
+}
 ._section .detail-box a:hover {
   background-color: transparent;
   color: #6bb7be;
