@@ -714,6 +714,7 @@ a:focus {
   height: 100%;
 }
 
+/* Estiliza a seção de informações */
 .info_section {
   background-color: #C59855;
   color: #ffffff;
@@ -721,33 +722,55 @@ a:focus {
   padding-bottom: 30px;
 }
 
-.info_section .contact_nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* Estiliza a caixa de ícones sociais */
+.info_section .info_form .social_box {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center; /* Centraliza horizontalmente os ícones */
+  align-items: center; /* Centraliza verticalmente os ícones */
+  margin-top: 25px; /* Espaço acima dos ícones sociais */
+  padding: 10px; /* Adiciona um pouco de preenchimento interno */
+  /* Opcional: define um fundo ou borda para melhor visibilidade */
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  /* border-radius: 10px; */
+}
+
+.info_section .info_form .social_box a {
+  display: flex;
+  justify-content: center; /* Garante que o ícone esteja centralizado dentro do link */
+  align-items: center; /* Garante que o ícone esteja alinhado verticalmente no meio do link */
+  border-radius: 50%; /* Torna os links circulares */
+  width: 50px; /* Define a largura dos links */
+  height: 50px; /* Define a altura dos links */
+  border: 2px solid #ffffff; /* Define a borda dos links */
+  color: #ffffff; /* Cor do ícone */
+  font-size: 24px; /* Tamanho do ícone */
+  margin: 0 15px; /* Espaçamento horizontal entre ícones */
+  text-decoration: none; /* Remove sublinhado dos links */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave para hover */
+}
+
+.info_section .info_form .social_box a:hover {
+  color: #000000; /* Cor do ícone ao passar o mouse */
+  background-color: #ffffff; /* Cor de fundo ao passar o mouse */
+  border-color: #000000; /* Cor da borda ao passar o mouse */
+}
+
+/* Ajustes para outros elementos */
+.info_section .contact_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 25px 0;
   text-align: center;
 }
 
 .info_section .contact_nav a {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px; /* Espaçamento horizontal entre os links */
 }
 
 .info_section .contact_nav a i {
@@ -758,141 +781,27 @@ a:focus {
   color: #000000;
 }
 
-.info_section .info_top {
-  padding: 45px 0;
-}
-
-.info_section h4 {
-  text-transform: uppercase;
-  position: relative;
-  margin-bottom: 25px;
-}
-
 .info_section .info_links .info_links_menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .info_section .info_links .info_links_menu a {
   color: #ffffff;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-      margin-top: 35px;
-      text-align: center;
-      margin-left: 30px;
+  flex-basis: 50%;
+  margin-top: 35px;
+  text-align: center;
+  margin: 0 15px; /* Espaçamento horizontal entre os links */
+  text-decoration: none;
 }
 
-.info_section .info_links .info_links_menu a:hover, .info_section .info_links .info_links_menu a.active {
+.info_section .info_links .info_links_menu a:hover,
+.info_section .info_links .info_links_menu a.active {
   color: #000000;
 }
 
-.info_section .info_post .post_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.info_section .info_post .post_box .img-box {
-  min-width: 65px;
-  max-width: 65px;
-  height: 65px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ffffff;
-  -ms-flex-preferred-size: calc(33% - 10px);
-      flex-basis: calc(33% - 10px);
-  padding: 10px;
-  margin: 5px;
-}
-
-.info_section .info_post .post_box .img-box img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.info_section .info_post .post_box p {
-  margin: 0;
-}
-
-.info_section .info_post .post_box:not(:nth-last-child(1)) {
-  margin-bottom: 15px;
-}
-
-.info_section .info_form input {
-  width: 100%;
-  border: none;
-  height: 45px;
-  margin-bottom: 15px;
-  padding-left: 25px;
-  background-color: #eaeaea;
-  outline: none;
-  color: #101010;
-}
-
-.info_section .info_form button {
-  display: inline-block;
-  padding: 10px 45px;
-  background-color: #6bb7be;
-  color: #ffffff;
-  border-radius: 0px;
-  border: 1px solid #6bb7be;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-}
-
-.info_section .info_form button:hover {
-  background-color: transparent;
-  color: #6bb7be;
-}
-
-.info_section .info_form .social_box {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-}
-
-.info_section .info_form .social_box a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 5px;
-  width: 45px;
-  height: 45px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  font-size: 18px;
-  margin-right: 10px;
-}
-
-.info_section .info_form .social_box a:hover {
-  color: #000000;
-  border-color: #000000;
-}
-
-/* footer section*/
+/* Estilos do rodapé */
 .footer_section {
   position: relative;
   text-align: center;
@@ -907,4 +816,5 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
 /*# sourceMappingURL=style.css.map */
