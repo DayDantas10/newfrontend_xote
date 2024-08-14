@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  
+
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -43,7 +43,8 @@
           </span>
         </a>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""> </span>
         </button>
 
@@ -68,7 +69,7 @@
               </span>
               <i class="fa fa-user" aria-hidden="true"></i>
             </a>
-           
+
           </div>
         </div>
       </nav>
@@ -84,49 +85,21 @@
         <div class="search-container">
           <input type="text" id="search-query" placeholder="Digite o nome do artista ou música">
           <button onclick="search()">Buscar</button>
-      </div>
-      <div class="results-container" id="results"></div>
-  
-      <script>
-          function search() {
-              const query = document.getElementById('search-query').value;
-              fetch(`/search?query=${encodeURIComponent(query)}`)
-                  .then(response => response.json())
-                  .then(data => {
-                      const resultsContainer = document.getElementById('results');
-                      resultsContainer.innerHTML = '';
-  
-                      if (data.artistas.length > 0) {
-                          resultsContainer.innerHTML += '<h2>Artistas</h2>';
-                          data.artistas.forEach(artista => {
-                              resultsContainer.innerHTML += `<div class="result-item"><strong>Artista:</strong> ${artista.nome_artista}</div>`;
-                          });
-                      }
-  
-                      if (data.musicas.length > 0) {
-                          resultsContainer.innerHTML += '<h2>Músicas</h2>';
-                          data.musicas.forEach(musica => {
-                              resultsContainer.innerHTML += `<div class="result-item"><strong>Música:</strong> ${musica.nome}<br><strong>Artista:</strong> ${musica.nome_artista}</div>`;
-                          });
-                      }
-  
-                      if (data.artistas.length === 0 && data.musicas.length === 0) {
-                          resultsContainer.innerHTML = '<p>Nenhum resultado encontrado.</p>';
-                      }
-                  })
-                  .catch(error => console.error('Erro:', error));
-          }
-      </script>
+        </div>
+        <div class="results-container" id="results"></div>
+
+
         <h2>
           Principais Músicas
         </h2>
         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
           <button type="button" class="btn btn-primary mr-2 btnMPB" id="1">MPB</button>
-          <button type="button" class="btn btn-primary mr-2">Forró</button>
-          <button type="button" class="btn btn-primary mr-2">Sertanejo</button>
-          <button type="button" class="btn btn-primary mr-2">Samba</button>
+          <button type="button" class="btn btn-primary mr-2 btnForro" id="2">Forró</button>
+          <button type="button" class="btn btn-primary mr-2 btnSertanejo" id="3">Sertanejo</button>
+          <button type="button" class="btn btn-primary mr-2 btnSamba" id="4">Samba</button>
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Mais
             </button>
             <ul class="dropdown-menu">
@@ -136,135 +109,17 @@
           </div>
         </div>
       </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <div class="box"> <!-- appendChild-->
-            <div class="img-box">
-              <img src="images/f1.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                brown Chair Design
-              </h5>
-              <div class="price_box">
-                <h6 class="price_heading">
-                  <span>$</span> 100.00
-                </h6>
-                <a href="">
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/f2.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Double Bed Design
-              </h5>
-              <div class="price_box">
-                <h6 class="price_heading">
-                  <span>$</span> 200.00
-                </h6>
-                <a href="">
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/f3.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                House Chair Design
-              </h5>
-              <div class="price_box">
-                <h6 class="price_heading">
-                  <span>$</span> 200.00
-                </h6>
-                <a href="">
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/f4.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                brown Table Design
-              </h5>
-              <div class="price_box">
-                <h6 class="price_heading">
-                  <span>$</span> 100.00
-                </h6>
-                <a href="">
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/f5.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Blue Chair Design
-              </h5>
-              <div class="price_box">
-                <h6 class="price_heading">
-                  <span>$</span> 200.00
-                </h6>
-                <a href="">
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/f6.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Brown Table Design
-              </h5>
-              <div class="price_box">
-                <h6 class="price_heading">
-                  <span>$</span> 200.00
-                </h6>
-                <a href="">
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+
+    <div class="row">
+      <!-- Local para incluir artistas -->
+    </div>
+
   </section>
 
   <!-- end furniture section -->
 
- 
+
 
   <!-- info section -->
   <section class="info_section long_section">
@@ -284,27 +139,28 @@
               <a href="">
                 <i class="fa fa-youtube" aria-hidden="true"></i>
               </a>
-              <a href="https://www.instagram.com/xoteletras?igsh=MTNsM2F0dnl3amNzYg%3D%3D&utm_source=qr" target="_blank">
+              <a href="https://www.instagram.com/xoteletras?igsh=MTNsM2F0dnl3amNzYg%3D%3D&utm_source=qr"
+                target="_blank">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
-      
-      <div class="col-md-4">
-    <div class="contact_nav">
-      <a href="">
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <span>
-          Email : xoteletras@gmail.com
-        </span>
-      </a>
+
+        <div class="col-md-4">
+          <div class="contact_nav">
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : xoteletras@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-    </div>
-  </div>
-</section>
-<!-- end info_section -->
+  </section>
+  <!-- end info_section -->
 
 
   <!-- footer section -->
@@ -321,17 +177,11 @@
   <!-- Artistas controller -->
   <script src="./js/artistasView.js" type="module"></script>
   <script src="./js/artistasController.js" type="module"></script>
-  
+
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
   <script src="js/bootstrap.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>  
-  <!-- End Google Map -->
-
 
 </body>
 
