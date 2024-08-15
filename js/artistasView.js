@@ -16,7 +16,7 @@ export function apresentarArtistas(artistas){
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>$</span> ${artista.cidade}
+                  ${artista.cidade}
                 </h6>
                 <a href="">
                   ${artista.estado}
