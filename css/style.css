@@ -408,6 +408,10 @@ a:focus {
   margin-top: 10px;
   margin-bottom: 35px;
 }
+.about_section .detail-box h5 {
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
 
 .about_section .detail-box a {
   display: inline-block;
