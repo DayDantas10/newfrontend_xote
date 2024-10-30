@@ -1,13 +1,12 @@
-window.addEventListener("load", (event) => {
-  console.log("page is fully loaded");
-});
 
-export function apresentarArtistas(artistas){
+
+
+export function apresentarEntrevistas(entrevistas){
 
     let div = document.querySelector(".row");
     let componente = "";
 
-    artistas.forEach(artista => {
+    entrevistas.forEach(entrevistas => {
         componente = componente  + `
         <div class="col-md-6 col-lg-4">
           <div class="box"> <!-- appendChild-->
