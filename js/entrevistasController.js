@@ -2,11 +2,11 @@
 import { apresentarEntrevistas } from "./entrevistasView.js";
 
 const btnMPB = document.querySelector(".btnMPB");
-let idGenero = btnMPB.id;
+let id = btnMPB.id;
 
 
 btnMPB.addEventListener("click",() => {
-    fetch(`http://localhost:5000/entrevistas/bygenero/${idGenero}`).then(response => {
+    fetch(`http://localhost:5000/entrevistas/byid/${id}`).then(response => {
         if (!response.ok){
             console.log("Falha");
         }
